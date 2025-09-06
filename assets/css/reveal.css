@@ -1,3 +1,8 @@
+.reveal-viewport .present {
+    border: 20px;    
+    padding: 20px;
+}
+
 .reveal-viewport .media-title-hidden {
       position: absolute !important;
       left: -50000px;
@@ -13,3 +18,41 @@
       border: 0;
       white-space: nowrap;
     }
+
+.reveal-viewport .text-align-left {
+    text-align: left;
+}
+
+.recenter {
+    text-align: center !important;
+}
+
+.r-hstack {
+  gap: 16px;
+}
+
+.reveal .red-text {
+    color: red !important;
+}
+
+.contrast71 {
+    color: #2E2EFF;
+    background: #FFFFFF;
+    font-size: 12pt;
+}
+
+.contrast41 {
+    color: #6161FF;
+    background: #FFFFFF;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.badcontrast{
+    color:#CACAFF;
+    background: #FFFFFF;
+}
+
+.times {
+    font-family: Times, serif;
+}

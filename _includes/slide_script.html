@@ -5,16 +5,20 @@
 <script src="{{ site.baseurl }}/assets/revealjs/plugin/markdown/markdown.js"></script>
 <script src="{{ site.baseurl }}/assets/revealjs/plugin/highlight/highlight.js"></script>
 <script src="{{ site.baseurl }}/assets/revealjs/plugin/math/math.js"></script>
+<script src="{{ site.baseurl }}/assets/revealjs/plugin/chalkboard/plugin.js"></script>
+<script src="{{ site.baseurl }}/assets/revealjs/plugin/customcontrols/plugin.js"></script>
 
 
 <!-- revealjs init -->
 <script>
   // Full list of configuration options available here:
   // https://revealjs.com/config/
-  Reveal.initialize({...{{site.reveal | jsonify}}, ...{{page.reveal | jsonify}},
-		     ...{plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath]}});
+  Reveal.initialize({...{{site.reveal | jsonify}}, ...{{page.reveal | jsonify}}, ...{{site.classvars | jsonify}},
+		     ...{plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath, RevealChalkboard, RevealCustomControls]}});
   //Reveal.initialize({{site.reveal | jsonify}});
   Reveal.configure({
+      dependencies: [{ src: 'plugin/reveal.js-qrcode/qrcode.min.js'},
+		     { src: 'plugin/reveal.js-qrcode/index.js'}],
       math: {
 	  // mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
 	  config: 'TeX-AMS_HTML-full',
