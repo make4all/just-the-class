@@ -5,7 +5,9 @@ title: Basic Data Structures
 Oct 5
 : [Linked Lists & Encapsulation](#)
   : [3.1](#), [2.2](#), [2.3](#)
-
+: Sample Reveal Slides
+  : [Slides](slides/1_example_reveal.html)
+  
 Oct 6
 : **Section**{: .label .label-purple }[Linked Lists](#)
   : [Solution](#)

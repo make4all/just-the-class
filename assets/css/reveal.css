@@ -1,0 +1,15 @@
+.reveal-viewport .media-title-hidden {
+      position: absolute !important;
+      left: -50000px;
+      bottom: -50000px;
+      border: 0;
+      white-space: nowrap;
+    }
+
+.media-title-hidden {
+      position: absolute !important;
+      left: -50000px;
+      bottom: -50000px;
+      border: 0;
+      white-space: nowrap;
+    }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include slide_head.html %}
+</head>
+<body>
+  <div class="reveal">
+<div class='footer' style="position: absolute; bottom: 1em; left: 1em; font-size: 0.5em;">
+</div>
+<div class="slides" aria-live="assertive">
+{% unless page.content == blank %}
+  <!-- Display page content if it's not blank -->
+<section id={{page.title}} data-markdown>
+<textarea data-template>
+  {{ page.content }}
+</textarea>
+</section>
+{% endunless %}
+{% if page.load_dir %}
+  {% assign slide_dir = page.load_dir %}
+{% else %}
+   {% assign slide_dir = page.name %}
+{% endif %}
+
+{% for slide_page in site.pages %}
+{% assign slide_page_path = slide_page.url | split:'/' %}
+{% if slide_page_path[1] == "slides" and slide_page_path[2] == slide_dir  %}
+{% if slide_page_path.size == 4 %}
+<section id={{slide_page_path[3]}} data-markdown>
+<textarea data-template>
+{{slide_page.content}}
+</textarea>
+</section>
+
+{% endif %}
+{% endif %}
+{% endfor %}
+</div>
+	</div>
+  {% include slide_script.html %}
+</body>
+</html>
+

@@ -20,4 +20,6 @@ Oct 1
 Oct 2
 : [Tracing, IntLists, & Recursion](#)
   : [2.1](#)
+: Sample Google Slides 
+  : [Slides](slides/2_example_google.html)
 : **HW 1 due**{: .label .label-red }

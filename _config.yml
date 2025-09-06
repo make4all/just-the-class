@@ -19,7 +19,23 @@ description: A modern, highly customizable, responsive Jekyll template for cours
 author: Kevin Lin
 baseurl: '/just-the-class' # the subpath of your site, e.g. /blog
 url: 'https://kevinl.info' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+exclude: [
+	 "Gemfile",
+	 "Gemfile.lock",
+	 "LICENSE",
+	 "vendor",
+	 "assets/revealjs/test",
+	  "assets/revealjs/index.html",
+    	  "assets/revealjs/README.md",
+    	  "assets/revealjs/bower.json",
+    	  "assets/revealjs/Gruntfile.js",
+    	  "assets/revealjs/CONTRIBUTING.md",
+    	  "assets/revealjs/LICENSE",
+    	  "assets/revealjs/package.json",
+	  "assets/revealjs/examples",
+	  "assets/revealjs/css/theme/README.md",
+	  "assets/revealjs/demo.html",
+	 ]
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.10.1
@@ -40,6 +56,10 @@ collections:
   modules:
   schedules:
   announcements:
+  revealjs:
+     search_exclude: true
+     nav_exclude: true
+ 
 # Default layouts for each collection type
 defaults:
   - scope:
@@ -77,3 +97,56 @@ compress_html:
 liquid:
   error_mode: strict
   strict_filters: true
+
+markdown_slide_separator: ---
+permalink: "/:title"
+slideNumber:
+  # Slide number formatting can be configured using these variables:
+  #  "h.v":  horizontal . vertical slide number (default)
+  #  "h/v":  horizontal / vertical slide number
+  #    "c":  flattened slide number
+  #  "c/t":  flattened slide number / total slides
+  # "none":  dont't show slide numbers
+  format: "c/t"
+reveal_path: "assets/revealjs/"
+
+## most values are unchanged from their defaults. The variables
+## that are unchanged are commented out and their default value is shown with _val_
+## for a full listing of values and defaults see https://revealjs.com/config/
+reveal:
+  theme: "white" # black/beige/blood/league/moon/night/serif/simple/sky/solarized/white
+  ## The "normal" size of the presentation, aspect ratio will be preserved
+  ## when the presentation is scaled to fit different resolutions. Can be
+  ## specified using percentage units.
+  width: 1200
+  height: 960
+  ## Factor of the display size that should remain empty around the content
+  margin: 0.1
+  ## Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2
+  maxScale: 1.5
+  ## Add the current slide number to the URL hash so that reloading the
+  ## page/copying the URL will return you to the same slide (true | _false_)
+  hash: true ## must be true or fragments break
+  ## Push each slide change to the browser history.  Implies `hash: true` (true | _false_)
+  ## history: false
+
+
+  ## Display presentation control arrows
+  ## Show controls? (_true_ | false)  default values for all settings shown as _val_
+  ## controls: true
+
+  ## Help the user learn the controls by providing hints, for example by
+  ## bouncing the down arrow when they first encounter a vertical slide (true | _false_)
+  ## controlsTutorial: false 
+
+  ## Disables the default revealjs slide layout (scaling and centering)
+  ## so that you can use custom CSS layout (true | _false_)
+  ## disableLayout: false
+
+  ## The maximum number of pages a single slide can expand onto when printing
+  ## to PDF, unlimited by default (Number.POSITIVE_INFINITY)
+  ## pdfMaxPagesPerSlide: 100
+
+  
+
